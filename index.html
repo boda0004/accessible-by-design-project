@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Empower Ability Labs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="images/logo.png" alt="Empower Ability Labs Logo" class="logo" />
+        <span class="brand-text">Empower Ability Labs</span>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#schedule">Schedule a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" tabindex="-1">
+    <h1>Welcome to Empower Ability Labs</h1>
+    <p>
+      Empower Ability Labs is a hub for learning and empathy-building. We promote accessible digital experiences through workshops, usability testing, and storytelling.
+    </p>
+    <button id="openModalBtn" class="btn-primary">Meet the Empower Community!</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Our Approach</th>
+          <th>Services</th>
+          <th>Testimonials</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hands-on simulations of assistive tech challenges.</td>
+          <td>
+            <ul>
+              <li>Lab Days</li>
+              <li>WCAG Training</li>
+              <li>Speaker Series</li>
+            </ul>
+          </td>
+          <td>“Transformed our team’s understanding of accessibility.” – Government of Canada</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Modal -->
+  <div id="communityModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content" role="document" tabindex="-1">
+      <div class="modal-header">
+        <h2 id="modalTitle">Community Steering Committee</h2>
+        <button class="close-button" id="closeModalBtn" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <p>We’ve worked with:</p>
+        <ul>
+          <li>McGill University</li>
+          <li>Walmart.ca</li>
+          <li>Apple.ca</li>
+          <li>Google.ca</li>
+          <li>Government of Canada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services" tabindex="-1">
+    <h2>Our Services</h2>
+    <img src="images/services.jpg" alt="Person giving thumbs up" class="service-img" />
+    <h3>Empathy Lab Days</h3>
+    <p>Step into the shoes of those with disabilities and learn by experience.</p>
+    <h3>Inspirational Speakers</h3>
+    <p>Real stories that spark innovation, empathy, and change in teams.</p>
+  </section>
+
+  <!-- Schedule a Call -->
+  <section id="schedule" tabindex="-1">
+    <h2>Schedule a Call</h2>
+    <p>
+      At Empower Ability Labs, we’re here to help. Fill out the form and we’ll get back to you as soon as possible.
+    </p>
+    <div class="form-with-image">
+      <form id="contactForm">
+        <label for="businessName">Business Name:</label>
+        <input type="text" id="businessName" name="businessName" required />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <label for="email">Email (required):</label>
+        <input type="email" id="email" name="email" required />
+        <fieldset>
+          <legend>What would you like to talk about?</legend>
+          <label><input type="radio" name="topic" value="workshops" required /> Workshops</label><br />
+          <label><input type="radio" name="topic" value="testing" /> Usability Testing</label><br />
+          <label><input type="radio" name="topic" value="awareness" /> Awareness Lab Days</label>
+        </fieldset>
+        <label for="message">Tell us about your event:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <div class="toggle-container">
+          <div id="emailSwitch" class="custom-switch" role="switch" tabindex="0" aria-checked="false"
+               onclick="toggleSwitch(this)" onkeydown="toggleSwitchKey(event, this)" aria-label="Receive email updates">
+            <div class="switch-thumb"></div>
+          </div>
+          <label for="emailSwitch">Receive email updates</label>
+        </div>
+        <button type="submit">Schedule a Call</button>
+      </form>
+      <img src="images/schedule-call.png" alt="Person scheduling a call on a phone" class="form-img" />
+    </div>
+  </section>
+
+  <footer>
+    <p>© Empower Ability Labs 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
