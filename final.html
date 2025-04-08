@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Empower Ability Labs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="images/logo.png" alt="Empower Ability Labs Logo" class="logo" />
+        <span class="brand-text">Empower Ability Labs</span>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#schedule">Schedule a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" tabindex="-1">
+    <h1>Welcome to Empower Ability Labs</h1>
+    <p>
+      Empower Ability Labs is a hub for learning and empathy-building. We offer services that promote accessibility awareness and help teams understand the lived experience of users with disabilities.
+    </p>
+    <button id="openModalBtn" class="btn-primary">Meet the Empower Community!</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Our Approach</th>
+          <th>Services</th>
+          <th>Testimonials</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hands-on learning experiences that simulate disability-related challenges.</td>
+          <td>
+            <ul>
+              <li>Empathy Workshops</li>
+              <li>Speaker Sessions</li>
+              <li>Assistive Tech Usability</li>
+            </ul>
+          </td>
+          <td>“Truly eye-opening. Helped our team shift our mindset!” – McGill University</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Modal -->
+  <div id="communityModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content" role="document" tabindex="-1">
+      <div class="modal-header">
+        <h2 id="modalTitle">Community Steering Committee</h2>
+        <button class="close-button" id="closeModalBtn" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          We get <strong>aha!</strong> moments from product managers who try our services for the first time.
+          We’ve worked with:
+        </p>
+        <ul>
+          <li>McGill University</li>
+          <li>Walmart.ca</li>
+          <li>Apple.ca</li>
+          <li>Google.ca</li>
+          <li>Government of Canada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services" tabindex="-1">
+    <h2>Our Services</h2>
+    <img src="images/services.jpg" alt="Accessibility lab session" class="service-img" />
+    <h3>Empathy Lab Days</h3>
+    <p>Experience barriers users face and how to overcome them through thoughtful design.</p>
+    <h3>Inspirational Speakers</h3>
+    <p>Hear from individuals with lived experiences to inspire inclusive thinking.</p>
+  </section>
+
+  <!-- Schedule a Call -->
+  <section id="schedule" tabindex="-1">
+    <h2>Schedule a Call</h2>
+    <p>Let us know what you’d like to explore, and we’ll follow up to book a meeting.</p>
+    <img src="images/schedule.jpg" alt="Person scheduling a call on laptop" class="schedule-img" />
+    <form id="contactForm">
+      <label for="email">Email (required):</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="topic">What would you like to talk about?</label>
+      <select id="topic" name="topic">
+        <option value="workshops">Workshops</option>
+        <option value="testing">Usability Testing</option>
+      </select>
+
+      <!-- Accessible toggle -->
+      <div class="toggle-container">
+        <div id="emailSwitch" class="custom-switch" role="switch" tabindex="0" aria-checked="false"
+          onclick="toggleSwitch(this)" onkeydown="toggleSwitchKey(event, this)" aria-label="Receive email updates">
+          <div class="switch-thumb"></div>
+        </div>
+        <label for="emailSwitch">Receive email updates</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© Empower Ability Labs 2025</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
